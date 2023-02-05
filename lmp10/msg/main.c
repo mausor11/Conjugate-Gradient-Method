@@ -14,7 +14,7 @@ int main(int argc, char **argv)
     //printf("\n");
     
     //int k = msg_solver(eqs);
-
+    free_matrix(eqs);
 
     return 0;
 

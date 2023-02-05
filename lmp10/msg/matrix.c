@@ -186,8 +186,11 @@ get_entry_matrix (matrix_t * m, int i, int j )
 void
 free_matrix (matrix_t * m)
 {
+  
   free (m->e);
   free (m);
+  
+  
 }
 
 matrix_t *

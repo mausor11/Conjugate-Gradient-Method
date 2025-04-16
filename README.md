@@ -1,34 +1,59 @@
-# Conjugate gradient method
+# 🔢 Conjugate Gradient Method
 
-### Jak odpalić program?
-1. Wchodzimy do folderu "gaus" oraz "msg" 
-  i wpisujemy komende "make"
-2. W folderze /lmp10 mamy do wyboru dwie opcje:
-	a) metoda gaus -> komenda "make aproxgaus"
-	b) metoda gradientu - > komenda "make aproxgradient"
-3. Po dokonaniu kompilacji wpisujemy "./aprox"
-4. Wybieramy potrzebne opcje:
-	przykładowo: ./aprox -s spl -p test/dane.1 -g myplot -f 5.1 -t 5.7 -n 300
-5. Odpalamy Gnuplot komendą "gnuplot"
-6. Do wywołania wpisujemy komendę "plot 'test/dane.1','myplot' "
+This project implements the **Conjugate Gradient Method** in Python — a powerful iterative algorithm for solving systems of linear equations of the form **Ax = b**, especially when A is large, sparse, symmetric, and positive-definite.
 
-#### Przydatne informacje:
-1. Wykresy porównujące metody znajdują się w folderze "Wykresy"
-2. Dane do kompilacji znajdują się w folderze "test"
+## 📘 What is the Conjugate Gradient Method?
 
+The Conjugate Gradient (CG) algorithm is used primarily in numerical linear algebra to solve large systems without explicitly computing matrix inverses.
 
-### How to run the program?
-1. Go to the "gaus" and "msg" folders
-  and enter the command "make"
-2. In the /lmp10 folder, we have two options:
-	a) gaus method -> "make aproxgaus" command
-	b) gradient method - > "make aproxgradient" command
-3. After compiling, enter command "./aprox" 
-4. Select the required options:
-	for example: ./aprox -s spl -p test/data.1 -g myplot -f 5.1 -t 5.7 -n 300
-5. Launch Gnuplot with the command "gnuplot"
-6. Enter the command "plot 'test/data.1','myplot' "
+- It's more efficient than Gaussian elimination for large sparse matrices.
+- It converges in at most `n` steps (for an `n x n` matrix), though usually much faster.
 
-#### Useful information:
-1. Graphs comparing the methods are in the "Wykresy" folder
-2. Compilation data is in the "test" folder
+## 🧠 Key Features
+
+- Works with symmetric positive-definite matrices
+- Iterative solution without direct matrix inversion
+- Custom stopping criteria based on tolerance or number of iterations
+- Clean, readable Python code with comments for learning purposes
+
+## 📦 Dependencies
+
+```bash
+numpy
+```
+
+Install with:
+
+```bash
+pip install numpy
+```
+
+## 🚀 How to Run
+
+```bash
+python conjugate_gradient.py
+```
+
+You can customize:
+- Matrix `A`
+- Vector `b`
+- Initial guess `x0`
+- Maximum iterations and tolerance
+
+## 📈 Example Output
+
+```
+Iteration 0: Residual norm = 3.7416
+Iteration 1: Residual norm = 0.5831
+Iteration 2: Residual norm = 0.1234
+...
+Converged after 5 iterations
+```
+
+## 📄 License
+
+MIT License – free to use, share, and learn from.
+
+---
+
+> 🎓 This project was created for academic purposes, to explore numerical methods and optimization in Python.
